@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Matrix - Web Access Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="matrix-background"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <h1>THE MATRIX</h1>
+                <p class="tagline">Enter the Web Unbound</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Search Section -->
+            <section class="search-section">
+                <div class="search-container">
+                    <form id="urlForm">
+                        <div class="input-group">
+                            <input 
+                                type="url" 
+                                id="urlInput" 
+                                placeholder="Enter URL (https://example.com)" 
+                                required
+                                class="url-input"
+                            >
+                            <button type="submit" class="access-btn">ACCESS</button>
+                        </div>
+                    </form>
+                    <div class="status-message" id="statusMessage"></div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-number" id="sitesAccessed">0</div>
+                    <p class="stat-label">Sites Accessed</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="bytesTransferred">0</div>
+                    <p class="stat-label">Data Transferred</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="avgLoadTime">0ms</div>
+                    <p class="stat-label">Avg Load Time</p>
+                </div>
+            </section>
+
+            <!-- History Section -->
+            <section class="history-section">
+                <h2>RECENT ACCESS</h2>
+                <div class="history-list" id="historyList">
+                    <p class="empty-state">No history yet. Enter a URL to get started.</p>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features-section">
+                <h2>FEATURES</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Fast Access</h3>
+                        <p>Lightning-fast page loading with optimized proxy routing</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Privacy First</h3>
+                        <p>Your requests are routed through secure channels</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🌍</div>
+                        <h3>Global Access</h3>
+                        <p>Access websites from anywhere without restrictions</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Analytics</h3>
+                        <p>Track your access patterns and data usage</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 The Matrix. Welcome to the real world.</p>
+        </footer>
+    </div>
+
+    <!-- Modal for displaying content -->
+    <div id="contentModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn">&times;</button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
